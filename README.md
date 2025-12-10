@@ -129,7 +129,7 @@ The script demonstrates how to:
 
 ### Training a Model
 
-This took a little over an hour on my M1 mac with 16G or RAM. I ran out of memory, which happens early, a few times. I ended up killing large memory processes and adjusting paramters.
+This took a little over an hour on my M1 Mac with 16GB of RAM. I ran out of memory a few times early in the process. I ended up killing large memory processes and adjusting parameters to resolve the issue.
 
 ```bash
 python setfit_01.py
@@ -144,7 +144,7 @@ This will:
 
 ### Evaluating a Trained Model
 
-I plan to do a lot more research and review. The first thing that jumped out to me is I agree with the model over dataset more often than I suspected... Reviewing manually is a fun and educational starting point for me.
+I plan to do more research and review. The first thing that jumped out to me is that I agree with the model's predictions over the dataset labels more often than I suspected. Reviewing predictions manually is a fun and educational starting point for me.
 
 ```bash
 python setfit_02.py
@@ -175,7 +175,7 @@ pip install setfit datasets sentence-transformers
 
 ### `scripts/huggingface_login.py` - Automated Hugging Face Authentication
 
-This utility script automates the process of logging into Hugging Face, with support for multiple authentication methods. I needed to develpe secret management for work and thought this would be a good learning opportunity. Infisical has the infrastructure I like but will evaluate Azure Key Vault for work. 
+This utility script automates the process of logging into Hugging Face, with support for multiple authentication methods. I needed to develop secret management for work and thought this would be a good learning opportunity. Infisical has the infrastructure I like, but I will also evaluate Azure Key Vault for work. 
 
 #### Purpose
 

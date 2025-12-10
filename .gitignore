@@ -1,0 +1,10 @@
+.env
+results
+.mypy_cache
+.DS_Store
+.pytest_cache
+.vscode
+.ruff_cache
+setfit-ag-news-20251209
+logs
+.venv
