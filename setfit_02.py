@@ -1,3 +1,5 @@
+"""Use the SetFit model to predict the label of the test set and calculate the accuracy."""
+
 from setfit import SetFitModel # type: ignore
 from datasets import load_dataset # type: ignore
 
@@ -6,7 +8,7 @@ model = SetFitModel.from_pretrained("setfit-ag-news-20251209") # Load from a loc
 ds = load_dataset("SetFit/ag_news")
 test_set = ds['test']
 
-label_map = {0: "World", 1: "Sports", 2: "Business", 3: "Science/Technology"}
+LABEL_MAP = {0: "World", 1: "Sports", 2: "Business", 3: "Science/Technology"}
 
 correct = 0
 total = 0
@@ -19,8 +21,8 @@ for i, item in enumerate(test_set):
         correct += 1
     else:
         print(text)
-        print(f"Prediction: {label_map.get(preds.item())}")
-        print(f"True Label: {label_map.get(item['label'], 'Unknown')}")
+        print(f"Prediction: {LABEL_MAP.get(preds.item())}")
+        print(f"True Label: {LABEL_MAP.get(item['label'], 'Unknown')}")
         probability = model.predict_proba([text])[0][preds.item()]
         print(f"Probability: {probability}")
         print("--------------------------------") 
